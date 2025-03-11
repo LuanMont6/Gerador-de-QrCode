@@ -7,7 +7,6 @@ st.title('Gerador de QrCode')
 url = st.text_input('Cole sua URL aqui', placeholder='https://exemplo.com')
 
 if url:
-
     qr = qrcode.QRCode(
         version=1,
         error_correction=qrcode.constants.ERROR_CORRECT_L,
@@ -18,7 +17,7 @@ if url:
     qr.add_data(url)
     qr.make(fit=True)
 
-    img = qr.make_image(fill_collor="black", back_collor="white")
+    img = qr.make_image(fill_color="black", back_color="white")
 
     pill_img = img.get_image()
 
